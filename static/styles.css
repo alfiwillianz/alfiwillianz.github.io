@@ -1,0 +1,143 @@
+/* Base Styles */
+body {
+    font-family: 'Roboto', sans-serif; /* Use Roboto font */
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0; /* Background color for the whole page */
+}
+
+/* Header Styles */
+header {
+    color: #333;
+    padding: 13% 0 0; /* 10% top padding */
+    display: flex; /* Use flexbox for alignment */
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center horizontally */
+}
+
+.header-content {
+    display: flex; /* Flex container for name and nav */
+    align-items: center; /* Vertically align items */
+}
+
+.name {
+    font-size: 24px;
+    font-weight: bold;
+    margin-right: 20px; /* Space between name and nav */
+    color: #333; /* Match text color */
+    text-decoration: none; /* Remove underline */
+}
+
+nav {
+    display: flex; /* Use flexbox for navigation */
+}
+
+nav a {
+    color: #666;
+    margin: 0 15px;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+nav a:hover {
+    color: #007BFF; /* Change hover color */
+}
+
+/* Main Content Styles */
+main {
+    display: flex; /* Use flexbox to center */
+    justify-content: center; /* Center horizontally */
+    align-items: flex-start; /* Align items to the start (top) */
+}
+
+.welcome-box {
+    background: white; /* Background for the box */
+    padding: 40px 25px; /* Increased padding */
+    margin: 3% 20px; /* Margin for spacing */
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    max-width: 800px; /* Max width for the box */
+    text-align: justify; /* Center text inside the box */
+}
+
+.welcome-box h2 {
+    margin: 0; /* Remove default margin from h2 */
+    font-size: 28px; /* Larger font size for the heading */
+    font-weight: 700; /* Bold weight for headings */
+}
+
+.welcome-box p {
+    font-size: 16px; /* Font size for the paragraph */
+    margin-top: 10px; /* Slight margin for spacing */
+    font-weight: 400; /* Regular weight for paragraphs */
+}
+
+/* Link Styles */
+main a {
+    color: #007BFF; /* Link color */
+    text-decoration: none; /* Remove underline */
+}
+
+main a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    padding: 100px 0;
+    font-size: 0.8em;
+}
+
+/* Project Tile Styles */
+.project-tile {
+    display: flex; /* Use flexbox to lay out the tile */
+    align-items: flex-start; /* Center the items vertically */
+    background: #fff; /* Background for the project tile */
+    padding: 10px 20px 30px; /* Padding inside the tile */
+    margin: 15px 0; /* Margin above and below each tile */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
+
+.project-info {
+    flex: 1; /* Allow the info to take remaining space */
+    padding-right: 20px; /* Space between the info and the image */
+}
+
+.project-image {
+    width: 150px; /* Set image width */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Rounded corners for the image */
+}
+
+/* Button Styles */
+.button-container {
+    margin-top: 10px; /* Spacing above the buttons */
+}
+
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center the icon in the button */
+    width: 40px; /* Set a specific width */
+    height: 40px; /* Set a specific height */
+    border-radius: 50%; /* Make the button round */
+    background-color: #8f8f8f; /* Button background color */
+    color: white; /* Icon color */
+    text-decoration: none; /* Remove underline */
+    transition: background-color 0.3s; /* Smooth background transition */
+}
+
+.button:hover {
+    background-color: #666; /* Change background color on hover */
+}
+
+/* Header and Welcome Box Text Styles */
+.header-content a {
+    font-weight: 500; /* Medium weight for links */
+}
+
+.button i {
+    font-size: 100px; /* Size of the icons */
+}
