@@ -149,6 +149,7 @@ footer {
 
 .contact-button:hover {
     background-color: #666; /* Change background on hover */
+    text-decoration: none; /* Remove underline on hover */
 }
 
 .contact-button i {
