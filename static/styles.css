@@ -7,10 +7,10 @@ body {
 
 header {
     color: #333;
-    padding: 13% 0 0; /* 10% top padding */
+    padding: 13% 0 0; /* 13% top padding */
     display: flex; /* Use flexbox for alignment */
     flex-direction: column; /* Stack elements vertically */
-    align-items: center; /* Center horizontally */
+    align-items: center; /* Center header content */
 }
 
 .header-content {
@@ -22,7 +22,7 @@ header {
     font-size: 24px;
     font-weight: bold;
     margin-right: 20px; /* Space between name and nav */
-    text-decoration: none; /* Remove underline */
+    text-decoration: none;
     color: #333; /* Match text color */
 }
 
@@ -38,36 +38,36 @@ nav a {
 }
 
 nav a:hover {
-    color: #007BFF; /* Change hover color as needed */
+    color: #007BFF; /* Change hover color */
 }
 
 main {
     display: flex; /* Use flexbox to center */
     justify-content: center; /* Center horizontally */
     align-items: flex-start; /* Align items to the start (top) */
-    height: 1920; /* Adjust height based on header and footer */
+    height: 1920px; /* Adjust height */
 }
 
 .welcome-box {
     background: white; /* Background for the box */
-    padding: 40px 25px 40px; /* Increased padding */
-    margin-top: 3%; /* 5% top margin for spacing from header */
-    margin-left: 20px;
-    margin-right: 20px;
+    padding: 40px 25px; /* Padding inside the box */
+    margin: 3% 20px 0; /* Top margin for spacing from header */
     border-radius: 15px; /* Rounded corners */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
     max-width: 800px; /* Max width for the box */
-    text-align: justify; /* Center text inside the box */
+    text-align: justify; /* Justify text */
 }
 
 .welcome-box h2 {
     margin: 0; /* Remove default margin from h2 */
     font-size: 28px; /* Larger font size for the heading */
+    font-weight: 700; /* Bold weight for headings */
 }
 
 .welcome-box p {
     font-size: 16px; /* Font size for the paragraph */
-    margin-top: 10px; /* Slight margin for spacing between heading and paragraph */
+    margin-top: 10px; /* Spacing between heading and paragraph */
+    font-weight: 400; /* Regular weight for paragraphs */
 }
 
 main a {
@@ -86,31 +86,31 @@ footer {
 }
 
 .project-tile {
-    display: flex; /* Use flexbox to lay out the tile */
-    align-items: flex-start; /* Center the items vertically */
-    background: #fff; /* Background for the project tile */
+    display: flex; /* Use flexbox for tiles */
+    align-items: flex-start; /* Align items vertically */
+    background: #fff; /* Background for project tile */
     padding: 10px 20px 30px; /* Padding inside the tile */
-    margin: 15px 0; /* Margin above and below each tile */
+    margin: 15px 0; /* Margin for each tile */
     border-radius: 10px; /* Rounded corners */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Soft shadow */
 }
 
 .project-info {
-    flex: 1; /* Allow the info to take remaining space */
-    padding-right: 20px; /* Space between the info and the image */
+    flex: 1; /* Allow info to take remaining space */
+    padding-right: 20px; /* Space between info and image */
 }
 
 .project-image {
     width: 150px; /* Set image width */
     height: auto; /* Maintain aspect ratio */
-    border-radius: 8px; /* Rounded corners for the image */
+    border-radius: 8px; /* Rounded corners for image */
 }
 
 .button-container {
-    display: flex; /* Use flex to lay out buttons in a row */
-    justify-content: left; /* Center the buttons horizontally */
+    display: flex; /* Use flex for buttons */
+    justify-content: flex-start; /* Align buttons to the left */
     gap: 10px; /* Space between buttons */
-    margin-top: 10px; /* Spacing above the buttons */
+    margin-top: 10px; /* Spacing above buttons */
 }
 
 .button {
@@ -121,53 +121,37 @@ footer {
     color: white; /* Text color */
     text-decoration: none; /* Remove underline */
     border-radius: 10px; /* Rounded corners */
-    transition: background-color 0.3s; /* Smooth background color transition */
-}
-
-.button:hover {
-    background-color: #666; /* Change background color on hover */
-    text-decoration: none; /* Remove underline on hover */
-}
-
-.header-content a {
-    font-weight: 500; /* Medium weight for links */
-}
-
-.welcome-box h2 {
-    font-weight: 700; /* Bold weight for headings */
-}
-
-.welcome-box p {
-    font-weight: 400; /* Regular weight for paragraphs */
-}
-
-.button {
+    transition: background-color 0.3s; /* Smooth transition */
     font-weight: 500; /* Medium weight for buttons */
 }
 
-.button i {
-    font-size: 20px; /* Size of the icons */
+.button:hover {
+    background-color: #666; /* Change background on hover */
+}
+
+.header-content a {
+    font-weight: 500; /* Medium weight for header links */
 }
 
 .contact-button {
     display: flex;
     align-items: center;
-    justify-content: center; /* Center the icon in the button */
-    width: 50px; /* Set a specific width */
-    height: 50px; /* Set a specific height */
-    border-radius: 50%; /* Make the button round */
-    background-color: #8f8f8f; /* Button background color */
+    justify-content: center; /* Center icon in button */
+    width: 50px; /* Set width */
+    height: 50px; /* Set height */
+    border-radius: 50%; /* Make button round */
+    background-color: #8f8f8f; /* Button background */
     color: white; /* Icon color */
     text-decoration: none; /* Remove underline */
-    transition: background-color 0.3s; /* Smooth background transition */
-    font-size: 20px; /* Adjust font size of icon */
+    transition: background-color 0.3s; /* Smooth transition */
+    font-size: 20px; /* Icon font size */
 }
 
 .contact-button:hover {
-    background-color: #666; /* Change background color on hover */
+    background-color: #666; /* Change background on hover */
 }
 
 .contact-button i {
-    font-size: 24px; /* Adjust the icon size */
-    color: white; /* Set the icon color */
+    font-size: 24px; /* Adjust icon size */
+    color: white; /* Set icon color */
 }
