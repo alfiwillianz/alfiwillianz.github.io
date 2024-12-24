@@ -1,8 +1,9 @@
 // script.js
 
-const toggleButton = document.getElementById('theme-toggle');
+const toggleCheckbox = document.getElementById('theme-toggle');
 const body = document.body;
 const header = document.querySelector('header');
+const nameElement = document.querySelector('.name'); // Select the name element
 const navLinks = document.querySelectorAll('nav a');
 const welcomeBox = document.querySelector('.welcome-box');
 const footer = document.querySelector('footer');
@@ -13,19 +14,21 @@ const contactButtons = document.querySelectorAll('.contact-button');
 // Check localStorage for the theme preference
 if (localStorage.getItem('dark-mode') === 'enabled') {
     enableDarkMode();
+    toggleCheckbox.checked = true; // Check the checkbox if dark mode is enabled
 }
 
-toggleButton.addEventListener('click', () => {
-    if (body.classList.contains('dark-mode')) {
-        disableDarkMode();
-    } else {
+toggleCheckbox.addEventListener('change', () => {
+    if (toggleCheckbox.checked) {
         enableDarkMode();
+    } else {
+        disableDarkMode();
     }
 });
 
 function enableDarkMode() {
     body.classList.add('dark-mode');
     header.classList.add('dark-mode');
+    nameElement.classList.add('dark-mode'); // Apply dark mode to the name
     navLinks.forEach(link => link.classList.add('dark-mode'));
     welcomeBox.classList.add('dark-mode');
     footer.classList.add('dark-mode');
@@ -38,6 +41,7 @@ function enableDarkMode() {
 function disableDarkMode() {
     body.classList.remove('dark-mode');
     header.classList.remove('dark-mode');
+    nameElement.classList.remove('dark-mode'); // Remove dark mode from the name
     navLinks.forEach(link => link.classList.remove('dark-mode'));
     welcomeBox.classList.remove('dark-mode');
     footer.classList.remove('dark-mode');
