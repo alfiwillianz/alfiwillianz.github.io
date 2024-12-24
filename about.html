@@ -53,7 +53,15 @@
         </div>
     </main>
     <footer>
-        <p>&copy; 2024 zwniff.</p>
+        <div class="footer-content"> <!-- New class for the footer content -->
+            <p>&copy; 2024 zwniff.</p>
+            <div class="theme-button-container"> <!-- New class for the button container -->
+                <input type="checkbox" id="theme-toggle" class="theme-toggle-checkbox"> <!-- Toggle switch -->
+                <label for="theme-toggle" class="theme-toggle-label"></label> <!-- Label for the toggle switch -->
+            </div>
+        </div>
     </footer>
+
+    <script src="script.js"></script> <!-- Ensure to include your JavaScript file for Toggle -->
 </body>
 </html>

@@ -86,6 +86,12 @@ footer {
     font-size: 0.8em;
 }
 
+.footer-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .project-tile {
     display: flex;
     align-items: flex-start;
@@ -164,6 +170,50 @@ footer {
 .contact-button i {
     font-size: 24px;
     color: white;
+}
+
+.theme-button-container {
+    display: inline-block;
+    margin-left: 20px;
+    align-items: center;        /* Center alignment for the container */
+}
+
+/* Hide the default checkbox */
+.theme-toggle-checkbox {
+    display: none; /* Hide the original checkbox */
+}
+
+/* Style the toggle switch */
+.theme-toggle-label {
+    display: inline-block;
+    cursor: pointer; /* Pointer cursor when hovering over the label */
+    width: 60px; /* Width of the switch */
+    height: 34px; /* Height of the switch */
+    background-color: #ccc; /* Light grey background */
+    border-radius: 34px; /* Rounded corners */
+    position: relative; /* Position for the pseudo-element */
+    transition: background-color 0.3s; /* Smooth transition */
+}
+
+.theme-toggle-label::after {
+    content: ""; /* Create a pseudo-element for the toggle circle */
+    position: absolute;
+    top: 4px; /* Position the toggle circle */
+    left: 4px; /* Position the toggle circle */
+    width: 26px; /* Width of the circle */
+    height: 26px; /* Height of the circle */
+    background-color: white; /* Color of the circle */
+    border-radius: 50%; /* Make it a circle */
+    transition: transform 0.3s; /* Smooth transition for toggle effect */
+}
+
+/* When the checkbox is checked, change the background and circle position */
+.theme-toggle-checkbox:checked + .theme-toggle-label {
+    background-color: #007BFF; /* Blue background when toggled */
+}
+
+.theme-toggle-checkbox:checked + .theme-toggle-label::after {
+    transform: translateX(26px); /* Move the circle to the right */
 }
 
 /* Media Queries for responsiveness */
@@ -290,4 +340,42 @@ footer {
         height: 45px;
         font-size: 18px;
     }
+}
+
+body.dark-mode {
+    background-color: #121212; /* Dark background */
+    color: #ffffff; /* Light text */
+}
+
+header.dark-mode {
+    color: #ffffff;
+}
+
+nav a.dark-mode {
+    color: #bbb; /* Lighter text color for links */
+}
+
+nav a.dark-mode:hover {
+    color: #4a90e2; /* Change hover color for links in dark mode */
+}
+
+.welcome-box.dark-mode {
+    background: #1e1e1e; /* Dark box background */
+    color: #ffffff; /* White text for the welcome box */
+}
+
+footer.dark-mode {
+    color: #bbb; /* Lighter text color for footer */
+}
+
+.project-tile.dark-mode {
+    background: #1e1e1e; /* Dark project tile background */
+}
+
+.button.dark-mode {
+    background-color: #666; /* Button color in dark mode */
+}
+
+.contact-button.dark-mode {
+    background-color: #666; /* Contact button color in dark mode */
 }
