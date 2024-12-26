@@ -1,5 +1,3 @@
-// script.js
-
 const toggleCheckbox = document.getElementById('theme-toggle');
 const body = document.body;
 const header = document.querySelector('header');
@@ -10,6 +8,9 @@ const footer = document.querySelector('footer');
 const projectTiles = document.querySelectorAll('.project-tile');
 const buttons = document.querySelectorAll('.button');
 const contactButtons = document.querySelectorAll('.contact-button');
+const contactForm = document.querySelector('.contact-form'); // Select contact form
+const contactPage = document.querySelector('.contact-page'); // Select contact page
+const contactInputs = document.querySelectorAll('.contact-form input, .contact-form textarea'); // Select inputs and textarea
 
 // Check localStorage for the theme preference
 if (localStorage.getItem('dark-mode') === 'enabled') {
@@ -35,6 +36,16 @@ function enableDarkMode() {
     projectTiles.forEach(tile => tile.classList.add('dark-mode'));
     buttons.forEach(button => button.classList.add('dark-mode'));
     contactButtons.forEach(button => button.classList.add('dark-mode'));
+    
+    // Add dark mode styles to contact page elements
+    if (contactPage) {
+        contactPage.classList.add('dark-mode');
+    }
+    if (contactForm) {
+        contactForm.classList.add('dark-mode');
+    }
+    contactInputs.forEach(input => input.classList.add('dark-mode'));
+    
     localStorage.setItem('dark-mode', 'enabled');
 }
 
@@ -48,5 +59,15 @@ function disableDarkMode() {
     projectTiles.forEach(tile => tile.classList.remove('dark-mode'));
     buttons.forEach(button => button.classList.remove('dark-mode'));
     contactButtons.forEach(button => button.classList.remove('dark-mode'));
+    
+    // Remove dark mode styles from contact page elements
+    if (contactPage) {
+        contactPage.classList.remove('dark-mode');
+    }
+    if (contactForm) {
+        contactForm.classList.remove('dark-mode');
+    }
+    contactInputs.forEach(input => input.classList.remove('dark-mode'));
+    
     localStorage.removeItem('dark-mode');
 }
