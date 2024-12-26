@@ -767,6 +767,22 @@ footer.dark-mode {
     margin-top: 10px;
 }
 
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 10px;
+}
+
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 10px;
+}
+
 .contact-form {
     background: white;
     padding: 30px;
@@ -774,14 +790,7 @@ footer.dark-mode {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     max-width: 600px;
     width: 100%;
-}
-
-.contact-form label {
-    display: block;
-    font-size: 14px;
-    font-weight: 600;
-    margin-bottom: 5px;
-    color: #333;
+    margin-top: 10px; /* Add space above the contact form */
 }
 
 .contact-form input,
@@ -792,6 +801,7 @@ footer.dark-mode {
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 14px;
+    font-family: sans-serif;
 }
 
 .contact-form textarea {
@@ -848,6 +858,7 @@ footer.dark-mode {
     background-color: #2a2a2a;
     color: #ffffff;
     border: 1px solid #444;
+    margin-top: 5px;
 }
 
 .contact-form input.dark-mode::placeholder,
