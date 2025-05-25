@@ -12,14 +12,39 @@ const contactButtons = document.querySelectorAll('.contact-button');
 const contactForm = document.querySelector('.contact-form');
 const contactInputs = document.querySelectorAll('.contact-form input, .contact-form textarea');
 
+// Check for device color scheme preference
+const prefersDarkMode = window.matchMedia('(prefers-color-scheme: dark)');
+
+// Function to handle theme based on device preference
+function handleDeviceThemeChange(e) {
+    if (localStorage.getItem('theme-preference') === null) {
+        // Only use device preference if user hasn't explicitly set a preference
+        if (e.matches) {
+            enableDarkMode();
+            toggleCheckbox.checked = true;
+        } else {
+            disableDarkMode();
+            toggleCheckbox.checked = false;
+        }
+    }
+}
+
 // Check localStorage for theme preference and apply on page load
 if (localStorage.getItem('dark-mode') === 'enabled') {
     enableDarkMode();
     toggleCheckbox.checked = true; // Ensure checkbox matches the dark mode state
+    localStorage.setItem('theme-preference', 'set'); // Mark that user has set preference
+} else if (localStorage.getItem('dark-mode') === null) {
+    // If no preference is stored, use device preference
+    handleDeviceThemeChange(prefersDarkMode);
 } else {
     disableDarkMode();
     toggleCheckbox.checked = false; // Ensure checkbox matches the light mode state
+    localStorage.setItem('theme-preference', 'set'); // Mark that user has set preference
 }
+
+// Listen for changes in device theme preference
+prefersDarkMode.addEventListener('change', handleDeviceThemeChange);
 
 // Toggle theme on checkbox change
 toggleCheckbox.addEventListener('change', () => {
@@ -28,6 +53,8 @@ toggleCheckbox.addEventListener('change', () => {
     } else {
         disableDarkMode();
     }
+    // Store that the user has explicitly set a preference
+    localStorage.setItem('theme-preference', 'set');
 });
 
 // Enable dark mode
