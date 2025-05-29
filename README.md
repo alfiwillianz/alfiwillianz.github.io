@@ -67,6 +67,12 @@ This website is designed to be hosted on GitHub Pages. When you push changes to 
 
 The `CNAME` file configures the custom domain `semiqolonn.is-a.dev`.
 
+## Theme Support
+
+The website features a theme toggle that allows users to switch between light and dark modes. The user's preference is saved to localStorage and will be remembered when they return to the site.
+
+The theme also respects the user's system preference by default if no explicit choice has been made.
+
 ## Browser Compatibility
 
 The website is designed to work with modern browsers including:
