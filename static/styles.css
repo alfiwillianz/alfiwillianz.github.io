@@ -92,6 +92,7 @@ footer {
 
 .footer-content {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
@@ -268,6 +269,33 @@ footer {
 .theme-toggle-checkbox,
 .theme-toggle-label {
     display: none;
+}
+
+/* Styles for the webring */
+.webring-container {
+    margin: 2rem auto;
+    padding: 1rem;
+    max-width: 600px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+}
+
+#data-ring-dot-list {
+    margin-bottom: 1rem;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.5;
+}
+
+#data-ring-dot-list a {
+    color: #FFC107;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+#data-ring-dot-list a:hover {
+    color: #FFEB3B;
+    text-decoration: underline;
 }
 
 /* Media Queries for responsiveness */
