@@ -147,7 +147,7 @@ footer {
 }
 
 .contact-button {
-    display: flex;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
     width: 50px;
@@ -157,7 +157,7 @@ footer {
     color: white;
     text-decoration: none;
     transition: background-color 0.3s;
-    font-size: 20px;
+    margin: 5px;
 }
 
 .contact-button:hover {
@@ -167,13 +167,11 @@ footer {
 
 .contact-button-container {
     display: flex;
-    justify-content: flex-start;
-    gap: 10px;
-    margin-top: 10px;
-    flex-direction: row;
-    flex-wrap: wrap; /* Allow wrapping */
-    width: 100%; /* Ensure it takes full width of its container */
-    max-width: 400px; /* Limit maximum width */
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+    width: 100%;
 }
 
 .contact-button i {
@@ -341,18 +339,16 @@ footer {
     }
 
     .contact-button-container {
-        flex-direction: row;
         justify-content: center;
-        max-width: 90%;
-        margin: 10px auto;
-        gap: 8px; /* Slightly reduce gap on mobile for better fitting */
+        width: 80%;
+        margin: 20px auto;
+        gap: 12px;
     }
 
     .contact-button {
-        width: 40px;
-        height: 40px;
-        font-size: 18px;
-        margin-bottom: 10px;
+        width: 45px;
+        height: 45px;
+        margin: 5px;
     }
 
     .contact-page {
