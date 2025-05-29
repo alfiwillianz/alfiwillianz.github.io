@@ -172,6 +172,8 @@ footer {
     margin-top: 10px;
     flex-direction: row;
     flex-wrap: wrap; /* Allow wrapping */
+    width: 100%; /* Ensure it takes full width of its container */
+    max-width: 400px; /* Limit maximum width */
 }
 
 .contact-button i {
@@ -341,15 +343,16 @@ footer {
     .contact-button-container {
         flex-direction: row;
         justify-content: center;
-        max-width: 90%; /* Changed from 200px to 90% for better adaptability */
-        margin: 10px auto; /* Center the container */
+        max-width: 90%;
+        margin: 10px auto;
+        gap: 8px; /* Slightly reduce gap on mobile for better fitting */
     }
 
     .contact-button {
         width: 40px;
         height: 40px;
         font-size: 18px;
-        margin-bottom: 10px; /* Add space between rows */
+        margin-bottom: 10px;
     }
 
     .contact-page {
