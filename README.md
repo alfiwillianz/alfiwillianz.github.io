@@ -1,90 +1,118 @@
-# semiqolonn.github.io
+# semiqolonn.github.io Vue Portfolio
 
-Personal portfolio website for semiqolonn, hosted on GitHub Pages.
+A modern, responsive portfolio website built with Vue.js 3 and Vue Router, featuring a clean dark mode design.
 
-## Overview
+## 🚀 Features
 
-This is a personal portfolio website built with HTML, CSS, and JavaScript, designed to showcase projects, achievements, and contact information. The site features a clean, responsive design with a dark mode interface.
-
-## Features
-
-- Responsive design that works well on mobile, tablet, and desktop devices
-- Clean dark mode interface
+- Modern Vue.js 3 implementation
+- Responsive design for all devices
+- Clean, dark-themed UI
+- Page transitions with fade effects
 - Project showcase section
 - Achievements section
-- About me page with contact links
-- Custom 404 page for handling broken links
+- About page with social links
+- Mobile-first approach
 
-## Project Structure
+## 📋 Pages
 
-```
-semiqolonn.github.io/
-├── index.html           # Homepage
-├── about.html           # About me page
-├── project.html         # Projects showcase page
-├── achievements.html    # Achievements and awards page
-├── 404.html             # Error page for handling missing routes
-├── static/              # Static assets directory
-│   ├── styles.css       # Main stylesheet
-│   └── script.js        # JavaScript functionality
-├── app.py               # Flask app for local development
-├── CNAME                # Custom domain configuration
-└── README.md            # This documentation file
-```
+- **Home** - Introduction and personal links
+- **Projects** - Showcase of development work
+- **Achievements** - Professional recognition and awards
+- **About** - Personal info and social media links
+- **404** - Custom page for not found routes
 
-## Running Locally
+## 🛠️ Tech Stack
 
-The repository includes a Flask application that allows you to test the website locally before pushing changes to GitHub Pages.
+- Vue.js 3
+- Vue Router 4
+- CSS3 (responsive design)
+- Font Awesome icons
+- Google Fonts (Roboto)
 
-### Prerequisites
-
-- Python 3.6 or higher
-- Flask
-
-### Installation
+## 🔧 Installation and Setup
 
 1. Clone the repository:
    ```
-   git clone https://github.com/semiqolonn/semiqolonn.github.io.git
-   cd semiqolonn.github.io
+   git clone https://github.com/semiqolonn/semiqolonn.github.io-vue-rewrite.git
+   cd semiqolonn.github.io-vue-rewrite
    ```
 
-2. Install Flask if you don't have it already:
+2. Install dependencies:
    ```
-   pip install flask
+   npm install
    ```
 
 3. Run the development server:
    ```
-   python app.py
+   npm run serve
    ```
 
-4. Open your browser and navigate to `http://localhost:5000`
+4. Build for production:
+   ```
+   npm run build
+   ```
 
-## Deployment
+## 📂 Project Structure
 
-This website is designed to be hosted on GitHub Pages. When you push changes to the main branch of the GitHub repository, the changes will automatically be deployed to the live site.
+```
+semiqolonn.github.io-vue-rewrite/
+├── public/              # Static files
+│   ├── index.html       # Main HTML file
+│   └── favicon.ico      # Website icon
+├── src/                 # Source files
+│   ├── assets/          # Assets (images, etc.)
+│   │   └── css/         # CSS styles
+│   ├── components/      # Vue components
+│   │   ├── Header.vue   # Site header
+│   │   └── Footer.vue   # Site footer
+│   ├── router/          # Vue Router configuration
+│   │   └── index.js     # Routes definition
+│   ├── views/           # Page components
+│   │   ├── Home.vue     # Home page
+│   │   ├── ProjectPage.vue  # Projects page
+│   │   ├── AchievementsPage.vue  # Achievements page
+│   │   ├── AboutPage.vue  # About page
+│   │   └── NotFound.vue   # 404 page
+│   ├── App.vue          # Main Vue component
+│   └── main.js          # Vue application entry point
+├── package.json         # Project metadata and dependencies
+└── vue.config.js        # Vue CLI configuration
+```
 
-The `CNAME` file configures the custom domain `semiqolonn.is-a.dev`.
+## 🚢 Deployment
 
-## Theme Support
+This site is configured for GitHub Pages deployment. After building:
 
-The website features a theme toggle that allows users to switch between light and dark modes. The user's preference is saved to localStorage and will be remembered when they return to the site.
+1. The `dist` folder contains the built website
+2. This can be deployed to GitHub Pages or any static site host
 
-The theme also respects the user's system preference by default if no explicit choice has been made.
+## 🔄 Development Workflow
 
-## Browser Compatibility
+1. Make changes to the relevant Vue files
+2. Test locally using `npm run serve`
+3. Build using `npm run build`
+4. Deploy the `dist` directory to your hosting platform
 
-The website is designed to work with modern browsers including:
-- Chrome/Edge (latest versions)
-- Firefox (latest version)
-- Safari (latest version)
-- Mobile browsers (iOS Safari, Android Chrome)
+## 📱 Responsive Design
 
-## License
+This portfolio is fully responsive with breakpoints for:
+- Mobile devices (below 768px)
+- Tablets (768px to 1024px)
+- Desktop (above 1024px)
 
-All rights reserved. This code is not open source.
+## 👤 Author
 
-## Contact
+**Malfino Muhammad Willianz (semiqolonn)**
+- GitHub: [@semiqolonn](https://github.com/semiqolonn)
+- Twitter: [@semiqolonn](https://twitter.com/semiqolonn)
+- LinkedIn: [Alfi Willianz](https://www.linkedin.com/in/alfi-willianz/)
 
-For questions or feedback, reach out through any of the contact methods listed on the About page.
+## 📄 License
+
+This project is available as open source under the terms of the MIT License.
+
+## 🙏 Acknowledgments
+
+- Font Awesome for the icons
+- Google Fonts for the Roboto font
+- Vue.js team for the amazing framework
