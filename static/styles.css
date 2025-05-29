@@ -171,6 +171,7 @@ footer {
     gap: 10px;
     margin-top: 10px;
     flex-direction: row;
+    flex-wrap: wrap; /* Allow wrapping */
 }
 
 .contact-button i {
@@ -306,7 +307,7 @@ footer {
     .welcome-box {
         margin: 20px 15px;
         padding: 20px;
-        max-width: 90%;
+        max-width: 95%;
         text-align: left;
     }
 
@@ -340,12 +341,15 @@ footer {
     .contact-button-container {
         flex-direction: row;
         justify-content: center;
+        max-width: 90%; /* Changed from 200px to 90% for better adaptability */
+        margin: 10px auto; /* Center the container */
     }
 
     .contact-button {
         width: 40px;
         height: 40px;
         font-size: 18px;
+        margin-bottom: 10px; /* Add space between rows */
     }
 
     .contact-page {
