@@ -4,12 +4,12 @@ Personal portfolio website for semiqolonn, hosted on GitHub Pages.
 
 ## Overview
 
-This is a personal portfolio website built with HTML, CSS, and JavaScript, designed to showcase projects, achievements, and contact information. The site features a clean, responsive design with both light and dark mode support.
+This is a personal portfolio website built with HTML, CSS, and JavaScript, designed to showcase projects, achievements, and contact information. The site features a clean, responsive design with a dark mode interface.
 
 ## Features
 
 - Responsive design that works well on mobile, tablet, and desktop devices
-- Light/dark mode toggle with preference persistence
+- Clean dark mode interface
 - Project showcase section
 - Achievements section
 - About me page with contact links
