@@ -167,11 +167,12 @@ footer {
 
 .contact-button-container {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start; /* Changed from center to flex-start */
     gap: 15px;
     margin-top: 20px;
     flex-wrap: wrap;
-    width: 100%;
+    width: 90%;
+    margin: 20px auto;
 }
 
 .contact-button i {
@@ -339,15 +340,18 @@ footer {
     }
 
     .contact-button-container {
-        justify-content: center;
-        width: 80%;
+        display: flex;
+        justify-content: center; /* Keep centered for mobile */
+        gap: 15px;
+        margin-top: 20px;
+        flex-wrap: wrap;
+        width: 90%; /* Changed to 90% as requested */
         margin: 20px auto;
-        gap: 12px;
     }
 
     .contact-button {
-        width: 45px;
-        height: 45px;
+        width: 40px;
+        height: 40px;
         margin: 5px;
     }
 
@@ -404,5 +408,15 @@ footer {
         width: 45px;
         height: 45px;
         font-size: 18px;
+    }
+
+    /* Making tablet view same as desktop */
+    .contact-button-container {
+        display: flex;
+        justify-content: flex-start; /* Changed from center to flex-start */
+        gap: 15px;
+        margin-top: 20px;
+        flex-wrap: wrap;
+        width: 100%;
     }
 }
