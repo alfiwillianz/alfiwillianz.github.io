@@ -1,0 +1,36 @@
+name: Deploy Vue.js to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main # Trigger this workflow when changes are pushed to the 'main' branch
+
+permissions:
+  contents: write # Grant write permission to the GITHUB_TOKEN to push to gh-pages branch
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest # Use the latest Ubuntu runner
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4 # Action to checkout your repository code
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20' # Specify the Node.js version. Use 'lts/*' for the latest LTS version, or a specific version like '16.x', '18.x', etc. I'm using 20 as of 2025-05-29.
+
+      - name: Install dependencies
+        run: npm ci # 'npm ci' is preferred over 'npm install' in CI environments for faster and more reliable installs based on package-lock.json
+
+      - name: Build Vue.js application
+        run: npm run build # This command runs your build script defined in package.json
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4 # A popular action for deploying to gh-pages
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }} # Automatically provided by GitHub
+          publish_dir: ./dist # The directory containing your built website files (e.g., 'dist' for Vue CLI, 'dist' for Vite)
+          publish_branch: gh-pages # The branch to which the built files will be pushed. This is the branch GitHub Pages will serve from.
+          # cname: 'semiqolonn.is-a.dev' # Uncomment and set if you're using a custom domain.
