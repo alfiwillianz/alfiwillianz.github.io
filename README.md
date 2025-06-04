@@ -4,7 +4,7 @@ Personal portfolio website for semiqolonn, hosted on GitHub Pages.
 
 ## Overview
 
-This is a personal portfolio website built with HTML, CSS, and JavaScript, designed to showcase projects, achievements, and contact information. The site features a clean, responsive design with a dark mode interface.
+This is a personal portfolio website built with HTML, CSS, and JavaScript, designed to showcase projects, achievements, blog posts, and contact information. The site features a clean, responsive design with a dark mode interface.
 
 ## Features
 
@@ -12,6 +12,7 @@ This is a personal portfolio website built with HTML, CSS, and JavaScript, desig
 - Clean dark mode interface
 - Project showcase section
 - Achievements section
+- Blog with articles about AI, data science, and programming
 - About me page with contact links
 - Custom 404 page for handling broken links
 
@@ -23,6 +24,10 @@ semiqolonn.github.io/
 ├── about.html           # About me page
 ├── project.html         # Projects showcase page
 ├── achievements.html    # Achievements and awards page
+├── blog.html            # Blog listing page
+├── blog/                # Blog directory
+│   └── posts/           # Individual blog posts
+│       └── getting-started-with-ml.html  # Sample blog post
 ├── 404.html             # Error page for handling missing routes
 ├── static/              # Static assets directory
 │   ├── styles.css       # Main stylesheet

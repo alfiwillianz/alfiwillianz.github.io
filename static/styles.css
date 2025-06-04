@@ -273,6 +273,94 @@ footer {
     display: none;
 }
 
+/* Blog Styles */
+.blog-list {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    margin-top: 20px;
+}
+
+.blog-post-preview {
+    padding: 15px 0;
+    border-bottom: 1px solid #333;
+}
+
+.blog-post-preview h3 {
+    margin: 0 0 10px 0;
+}
+
+.blog-post-preview h3 a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.blog-post-preview h3 a:hover {
+    color: #4a90e2;
+}
+
+.blog-post-meta {
+    font-size: 14px;
+    color: #999;
+    margin-bottom: 10px;
+}
+
+.read-more {
+    display: inline-block;
+    margin-top: 10px;
+    color: #4a90e2;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.read-more:hover {
+    text-decoration: underline;
+}
+
+/* Individual Blog Post Styles */
+.blog-post {
+    max-width: 800px;
+}
+
+.blog-post-header {
+    margin-bottom: 30px;
+}
+
+.blog-post-header h2 {
+    margin-bottom: 10px;
+    font-size: 32px;
+}
+
+.blog-post-content {
+    line-height: 1.8;
+    font-size: 16px;
+}
+
+.blog-post-content h3 {
+    margin: 30px 0 15px;
+    font-size: 22px;
+}
+
+.blog-post-content p {
+    margin-bottom: 20px;
+}
+
+.blog-post-content ul, 
+.blog-post-content ol {
+    margin-bottom: 20px;
+    padding-left: 20px;
+}
+
+.blog-post-content li {
+    margin-bottom: 8px;
+}
+
+.blog-post-footer {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #333;
+}
+
 /* Media Queries for responsiveness */
 @media screen and (max-width: 767px) {
     header {
@@ -365,6 +453,14 @@ footer {
 
     .contact-form {
         padding: 20px;
+    }
+
+    .blog-post-header h2 {
+        font-size: 24px;
+    }
+
+    .blog-post-content h3 {
+        font-size: 18px;
     }
 }
 
